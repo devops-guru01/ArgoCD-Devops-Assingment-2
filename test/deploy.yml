@@ -6,7 +6,6 @@ metadata:
     app: test
   name: test
   namespace: default
-  uid: 322a8490-3582-4240-8c62-8b46c3cbe534
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
