@@ -1,7 +1,6 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: "2024-05-01T12:11:18Z"
   labels:
     app: test
   name: test
@@ -20,7 +19,6 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: test
     spec:

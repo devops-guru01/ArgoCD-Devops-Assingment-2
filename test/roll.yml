@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: test-rollout
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test
+  strategy:
+    blueGreen:
+      activeService: test
+      previewService: test-preview
+      autoPromotionEnabled: true
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+      - name: test
+        image: test:devops
+        ports:
+        - containerPort: 5000
